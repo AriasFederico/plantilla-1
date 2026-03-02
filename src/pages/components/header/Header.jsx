@@ -1,7 +1,8 @@
 import './Header.scss';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { global } from '../../../data/global';
 import { Nav } from './nav/Nav';
+
 const { header, logo } = global;
 
 const { navigationLinks, menuBurguer } = header;

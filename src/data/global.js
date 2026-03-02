@@ -10,7 +10,7 @@ export const global = {
 
 	header: {
 		navigationLinks: [
-			{ label: 'Home', url: '#hero' },
+			{ label: 'Home', url: '#' },
 			{ label: 'Products', url: '#products' },
 			{ label: 'About Us', url: '#about' },
 		],
@@ -26,7 +26,7 @@ export const global = {
 			'Experience the finest artisanal coffee, freshly roasted beans, and handcrafted beverages in a warm, welcoming atmosphere that feels like home.',
 		ctaButton: [
 			{ text: 'View Menu', url: '#products', variant: '', id: 1 },
-			{ text: 'Contact Us', url: '#', variant: 'secondary', id: 2 },
+			{ text: 'Contact Us', url: '#visit', variant: 'secondary', id: 2 },
 		],
 		image: hero,
 	},

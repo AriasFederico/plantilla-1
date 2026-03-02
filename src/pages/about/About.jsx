@@ -1,4 +1,5 @@
 import './About.scss';
+import { motion } from 'framer-motion';
 import { global } from '../../data/global';
 import { SocialLinks } from './components/social/SocialLinks';
 import { VisitCard } from './components/visitCards/VisitCard';
@@ -12,7 +13,12 @@ const { mission } = about;
 export const About = () => {
 	return (
 		<section className='About' id='about'>
-			<div className='About__container'>
+			<motion.div
+				className='About__container'
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+			>
 				<div className='About__intro'>
 					<h2 className='About__title'>{about.title}</h2>
 					{about.description?.map((text, index) => (
@@ -46,7 +52,7 @@ export const About = () => {
 					</div>
 				</div>
 
-				<div className='About__visit'>
+				<div className='About__visit' id='visit'>
 					<h3 className='About__visit-title'>{businessInfo.title}</h3>
 					<div className='About__visit-cards'>
 						{storeDetails?.map(
@@ -62,7 +68,7 @@ export const About = () => {
 						)}
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 };

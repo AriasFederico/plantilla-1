@@ -1,4 +1,5 @@
 import './Hero.scss';
+import { motion } from 'framer-motion';
 import { global } from '../../data/global';
 import { Button } from '../components/common/button/Button';
 
@@ -9,7 +10,12 @@ export const Hero = () => {
 	return (
 		<main className='Hero' id='hero'>
 			<div className='Hero__container'>
-				<div className='Hero__content'>
+				<motion.div
+					className='Hero__content'
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+				>
 					<h1 className='Hero__h1'>
 						{title} <span className='Hero__span'>{span}</span> {endTitle}
 					</h1>
@@ -19,10 +25,15 @@ export const Hero = () => {
 							<Button text={text} url={url} variant={variant} key={text} />
 						))}
 					</div>
-				</div>
-				<div className='Hero__media'>
+				</motion.div>
+				<motion.div
+					className='Hero__media'
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+				>
 					<img src={image} alt={title} className='Hero__image' />
-				</div>
+				</motion.div>
 			</div>
 		</main>
 	);

@@ -1,3 +1,4 @@
+import { Button } from '../../common/button/Button';
 import './Nav.scss';
 
 export const Nav = ({ navigationLinks, onCloseMenu, menuActive }) => {
@@ -12,6 +13,9 @@ export const Nav = ({ navigationLinks, onCloseMenu, menuActive }) => {
 					</li>
 				))}
 			</ol>
+			{menuActive && (
+				<Button text={'Visit us'} url={'#visit'} onClick={onCloseMenu} />
+			)}
 		</nav>
 	);
 };
